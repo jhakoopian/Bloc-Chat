@@ -1,0 +1,10 @@
+body {
+  font-family: sans-serif;
+}
+
+.rooms {
+  padding: 20px 20px 20px 20px;
+  width: 20%;
+  background-color: rgb(200, 200, 200);
+  height: 600px;
+}
