@@ -9,11 +9,7 @@ body {
   margin: 0;
 }
 
-.container {
-  width: 100%;
-}
-
-.rooms {
+.room-list {
   width: 200px;
   padding: 20px 20px 20px 20px;
   background-color: rgb(200, 200, 200);
@@ -26,12 +22,16 @@ p {
   cursor: pointer;
 }
 
-.messages {
+.room-name {
   height: 25px;
-  width: 900px;
   padding: 20px 20px 20px 20px;
-  float: left;
   border-left: 1px solid white;
-  background-color: rgb(200, 200, 200);
-  margin: 0;
+  border-bottom: 1px solid white;
+  background-color: rgb(225, 225, 225);
+}
+
+.messages {
+  height: 40px;
+  padding-top: 20px;
+  border-bottom: 1px solid rgb(225, 225, 225);
 }

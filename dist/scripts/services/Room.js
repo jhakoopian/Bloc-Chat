@@ -1,7 +1,6 @@
 (function() {
     function Room($firebaseArray) {
         var Room = {};
-        var currentRoom = null;
 
         var ref = firebase.database().ref().child("rooms");
         var rooms = $firebaseArray(ref);
@@ -19,18 +18,12 @@
         //     profile_picture : imageUrl
         //   });
         // }
-
         // var list = $firebaseArray(ref);
         // list.$add({ foo: "bar" }).then(function(ref) {
         //   var id = ref.key;
         //   console.log("added record with id " + id);
         //   list.$indexFor(id); // returns location in the array
         // });
-
-        Room.setRoom = function(room) {
-          this.currentRoom = room;
-          console.log(room);
-        }
 
         return Room;
     }
