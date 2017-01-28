@@ -9,27 +9,29 @@
             this.newRoom = "";
         }
 
+        var currentRoomId = "";
+
         this.setRoom = function(room) {
             this.currentRoom = room;
-            this.messages = Message.getByRoomId(room.$id);
+            currentRoomId = room.$id;
+            this.messages = Message.getByRoomId(currentRoomId);
         }
 
-        this.username = $cookies.get('blocChatCurrentUser');
+        var currentUser = $cookies.get('blocChatCurrentUser');
+
+        this.username = currentUser;
 
         this.changeUsername = function(newUsername) {
             $cookies.put('blocChatCurrentUser', newUsername);
-            this.username = $cookies.get('blocChatCurrentUser');
+            currentUser = $cookies.get('blocChatCurrentUser');
+            this.username = currentUser;
             this.newUsername = "";
         }
 
-        // this.getMessages = function() {
-        //     Message.get(room);
-        //     console.log("this worked");
-        // }
-
-        // this.getMessages = function(room) {
-        //     Message.getMessages(room)
-        // }
+        this.sendMessage = function(message) {
+          Message.send(message, currentRoomId, currentUser);
+          this.message = "";
+        }
     }
 
     angular
