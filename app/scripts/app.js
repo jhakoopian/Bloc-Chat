@@ -7,14 +7,14 @@
             });
 
         $stateProvider
-            .state('landing', {
+            .state('main', {
                 url: '/',
-                controller: 'LandingCtrl as landing',
-                templateUrl: '/templates/landing.html'
+                controller: 'MainCtrl as main',
+                templateUrl: '/templates/main.html'
             });
         }
 
     angular
-        .module('blocChat', ['ui.router', 'firebase', 'ngCookies'])
+        .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap', 'ngCookies'])
         .config(config);
 })();

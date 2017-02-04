@@ -4,6 +4,8 @@ body {
 }
 
 .left-panel {
+  /*position: fixed;
+  left: 0px;*/
   width: 200px;
   background-color: rgb(200, 200, 200);
   height: 675px;
@@ -12,31 +14,43 @@ body {
   border-right: 1px solid white;
 }
 
-.app-name-container {
+.app-name {
   background-color: rgb(100, 100, 100);
   height: 40px;
-  padding-top: 14px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid white;
-}
-
-.app-name {
-  color: white;
+  padding: 20px;
   display: table-cell;
-  vertical-align: middle;
-  padding-left: 20px;
+  width: inherit;
+  border-bottom: 1px solid white;
+  color: white;
+  font-weight: heavy;
+  font-size: 30px;
 }
 
-.room-info-and-forms-container {
-  padding-left: 20px;
+.mid-left {
+  padding-left: 10px;
+  padding-top: 15px;
 }
 
 .room-names {
   cursor: pointer;
+  padding-left: 10px;
+  font-size: 15px;
 }
 
 .room-names:hover {
   color: rgb(225, 225, 225);
+}
+
+.bottom-left {
+  position: fixed;
+  bottom: 20px;
+}
+
+.instructions {
+  /*padding-left: 10px;*/
+  padding-top: 10px;
+  padding-left: 5px;
+  width: 155px;
 }
 
 form {
@@ -48,24 +62,32 @@ form {
 }
 
 .room-name {
-  height: 40px;
-  padding-top: 23px;
+  height: 82px;
+  padding-top: 30px;
+  left: 20px;
   background-color: rgb(225, 225, 225);
   border-bottom: 1px solid rgb(215, 215, 215);
 }
 
 .messages {
-  height: 40px;
+  /*left: 200px;*/
+  height: 70px;
   padding-top: 23px;
   border-bottom: 1px solid rgb(225, 225, 225);
 }
 
+/*.name-circle {
+  height: 50px;
+  width: 50px;
+  background-color: blue;
+}*/
+
 .message-input {
-  height: 40px;
-  padding-top: 23px;
+  height: 80px;
+  padding-top: 28px;
   background-color: rgb(225, 225, 225);
   position: fixed;
-  bottom: 0;
+  bottom: 0px;
   left: 201px;
   width: 100%;
 }
